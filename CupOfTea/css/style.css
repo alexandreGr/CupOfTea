@@ -1,0 +1,493 @@
+/* FONT FACE */
+/* Appelle les polices de la page */
+
+/*GLOBAL */
+/* Balises et class appelés à plusieurs endroits dans la page */
+*{
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	transition: all .2s ease 0s;
+    /* Visualisation des éléments */
+    /*border: 1px dotted rgba(0,0,0,0.3);*/
+}
+*:hover{
+	transition: all .2s ease 0s;
+}
+html{
+	font-size: 62.5%
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+    width: 100%;
+}
+.contenair{
+	margin: 0 auto;
+	max-width: 1100px;
+}
+figure{
+	margin: 0;
+}
+/*Initialisation des liens*/
+a, a:hover, a:visited, a:active {
+	text-decoration: none;
+	color: white;
+}
+/*Gestion des titres*/
+h1{
+	line-height: 2;
+	font-size: 4rem;
+	color: #96af09;
+}
+h2{
+	line-height: 2;
+	font-size: 4rem;
+	color: gray;
+}
+legend{
+	line-height: 2;
+	font-size: 2.5rem;
+	color: #96af09;
+	padding: 8px;
+}
+h3{
+	line-height: 2;
+	font-size: 2rem;
+}
+.price span{
+	font-size: 2.4rem;
+	font-weight: bold;
+}
+/*Gestion du flex*/
+.column{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex: 1;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+	flex: 1;
+}
+/*Gestion du float et du clear*/
+.right{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.left{
+	float: left;
+}
+.clear::after{
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+
+}
+/* Cacher un élément */
+.hidden{
+	display: none;
+}
+
+
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+header{
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+#info p{
+	padding: 10px;
+	margin: 0 0 10px 0;
+	background-color: rgba(135,158,15,0.9);
+	width: 100%;
+	text-align: center;
+}
+#info img{
+	width: 120px;
+}
+#titre{
+	flex-flow:row wrap; 
+	display: flex; 
+	justify-content: space-between;
+}
+#logo{
+	text-align: center; 
+	flex-basis: 100%;
+}
+header nav.flex{
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	align-items: center;
+	flex: 1;
+	text-transform: uppercase;
+	padding: 0 0 28px 0;
+}
+header nav a{
+	line-height: 2;
+	padding: 10px;
+}
+header nav a:hover{
+	background: rgba(255,255,255, 0.2);
+}
+#monPanier{
+	order:-1;
+	align-self: flex-start;
+	box-shadow: 1px 1px 8px rgba(135,158,15,1);
+	border-radius: 50px;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	padding: 10px;
+}
+#monPanier .fa{
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 100%;
+}
+
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+main section{
+	margin: 20px 0;
+	padding: 0 15px 0 15px;
+	background-color: white;
+	color: gray;
+}
+main fieldset{
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+	background-color: white;
+	text-align: center;
+	margin: 0;
+	padding: 0 0 25px 0;
+}
+main fieldset legend{
+	margin: 0 auto;
+}
+figcaption{
+	font-weight: bold;
+}
+main fieldset a:hover{
+	opacity: 0.75;
+}
+
+#choiceTea figure{
+	display: inline-block;
+	width: 50%;
+	margin: 0 auto;
+	opacity: 0.5;
+}
+#choiceTea legend{
+	flex-basis: 100%;
+	margin: 0 auto;
+}
+#choiceTea figure:hover{
+	opacity: 1;
+}
+
+main section a{
+	background-color: rgba(180, 153, 141, 1);
+	padding: 8px 14px;
+	text-transform: uppercase;
+}
+
+/*PAGE ABOUT*/
+main.about, 
+main.about section,
+#ourTeam h2, 
+#ourTeam fieldset,
+section#ourConcept p,
+section#ourConcept h2,  
+#ourConcept fieldset,
+footer.about{
+	margin: 0 auto;
+	padding: 0;
+}
+main.about section{
+	padding: 15px;
+	text-align: left;
+}
+main.about fieldset{
+	text-align: left;
+}
+#ourTeam img{
+	width: 100%;
+}
+#ourTeam legend{
+	margin: 0;
+}
+#ourConcept article{
+	text-align: center;
+	background-color: rgba(0,0,0, 0.1);
+	padding: 15px;
+}
+footer.about{
+	margin-top: 25px;
+}
+/*PAGE TEA*/
+main.tea section.flex{
+	display: flex;
+	flex-direction: column;
+	flex:1;	
+}
+main.tea fieldset + fieldset{
+		border: none;
+	}
+/*PAGE PRODUCTS*/
+main.products section{
+	text-align: center;
+	margin: 0 auto;
+}
+main.products section .details{
+	text-align: left;
+}
+main.products section .bold{
+	font-weight: bold;
+}
+.avis{
+	display: block; 
+	width: 35%; 
+	margin: 0 auto;
+}
+.rate .fa:hover, .checked{
+	color: orange;
+}
+.rate a{
+	background-color: white;
+	color: lightgreen;
+	text-transform: lowercase;
+	padding: 0;
+	margin: 0 auto;
+}
+span.jqEmoji{
+	color: orange;
+	text-align: center;
+}
+#weightTea{
+	width: 50%;
+	background-color: rgba(0,0,0, 0.1);
+	color: gray;
+	padding: 10px 18px;
+	border-radius: 6px;
+}
+
+/* FOOTER */
+/* Ce qui concerne le footer */
+footer{
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: white;
+	text-align: center;
+	margin-top: 25px;
+}
+
+footer section.row{
+	padding: 15px;
+	text-transform: uppercase;
+}
+footer section > *{
+	flex-basis: 50%;
+}
+footer section.row a i.fa{
+	display: block;
+
+}
+footer section, 
+footer small{
+	background-color: rgba(0,0,0, 0.1);
+}
+
+footer nav{
+	display: flex;
+	flex-direction: column;
+	padding-top: 15px;
+}
+footer nav a{
+	padding-top: 15px;
+	line-height: 2;
+}
+footer ul, 
+footer li ul{
+	margin-left: -40px;
+}
+footer li h3{
+	text-transform: uppercase;
+}
+footer ul li{
+	list-style: none;
+}
+
+footer small a img{
+	margin-top: 15px;
+	width: 50px;
+}
+footer small{
+	display: block;
+	line-height: 2;
+}
+
+@media screen and (min-width: 1026px){
+	#info img.hidden {
+	    display: block;
+	    position: absolute;
+	    top: 0px;
+	    right: 0px;
+	}
+	header nav.flex{
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+	}
+	#monPanier{
+		order:1;
+		align-self: center;
+		box-shadow: 1px 1px 8px rgba(135,158,15,1);
+		border-radius: 50px;
+		padding: 10px;
+	}
+	#monPanier .hidden{
+		display: inline-block;
+	}
+
+	#offreNoel.hidden{
+		display: block;
+		color: gray;
+		text-align: center;
+	}
+	#offreNoel.hidden img{
+		width: 100%;
+	}
+
+	#choiceTea figure{
+		width: 20%;
+		margin: 0 auto;
+	}
+	#topProducts.flex{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;	
+	}
+	#topProducts.flex > *{
+		flex-basis: 33.5%;
+	}
+	#topProducts.flex legend{
+		flex-basis: 100%;
+	}
+	#topProducts fieldset + fieldset{
+		margin-left: 15px;
+	}
+
+	footer nav ul.flex{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-content: center;
+	}
+	footer nav ul{
+		flex-basis: calc(100%/3);
+	}
+	footer section.row{
+		flex-wrap: nowrap;	
+	}
+
+	/*PAGE ABOUT*/
+	
+	#logo{
+		text-align: right; 
+		flex-basis: 0;
+	}
+
+	main.about{
+		padding: 0 25px;
+	}
+	#ourTeam img{
+		width: 50%;
+	}
+	#ourTeam fieldset:nth-child(even) img{
+		float: left;
+		padding-right: 15px; 
+	}
+	#ourTeam fieldset:nth-child(odd) img{
+		float: right;
+		
+		padding-left: 15px; 
+	}
+	#ourConcept article.flex{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+	#ourConcept article.flex > *{
+		flex-basis: calc(100%/3);
+	}
+	#ourConcept .concept p{
+		padding: 0 15px;
+	}
+
+	/*Page tea*/
+	main.tea section.flex{
+		display: flex;
+		flex-flow: row wrap;
+		flex:1;	
+	}
+	main.tea section.flex > *{
+		flex-basis: calc(100%/3);
+	}
+	main.tea section.flex img{
+		flex-basis: 16%;
+	}
+	main.tea section.flex fieldset:nth-child(2){
+		flex-basis: 84%;
+	}
+	main.tea section.flex fieldset img{
+		width: 80%;
+	}
+	main.tea .hidden{
+		display: flex;
+	}
+
+	main.products .top{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		
+	}
+	main.products .top h2{
+		flex-basis: 100%;
+		text-align: left;
+	}
+	main.products .bottom{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+
+	}
+	main.products .flex{
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-content: flex-start;
+
+	}
+}
+
+
